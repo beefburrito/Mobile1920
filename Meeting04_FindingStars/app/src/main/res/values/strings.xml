@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Constraint</string>
+    <string name="instruction_title">How to Play:</string>
+    <string name="instruction_body">Find The Star</string>
+</resources>
