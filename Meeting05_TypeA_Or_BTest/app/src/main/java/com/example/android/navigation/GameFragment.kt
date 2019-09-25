@@ -99,10 +99,14 @@ class GameFragment : Fragment() {
                     binding.invalidateAll()
                 }
                 if (questionIndex == numQuestions) {
-                    if (points > (numQuestions + 1) / 2) {
+                    if (points > (numQuestions + 1)*3 / 4) {
                         view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
-                    } else {
+                    }
+                    if (points < (numQuestions + 1)/4) {
                         view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
+                    }
+                    else {
+                        view.findNavController().navigate(R.id.action_gameFragment_to_typeAB)
                     }
                 }
             }

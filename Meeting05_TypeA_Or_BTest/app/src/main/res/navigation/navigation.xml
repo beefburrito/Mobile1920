@@ -29,6 +29,10 @@
             android:id="@+id/action_gameFragment_to_gameWonFragment"
             app:destination="@id/fragment_typeA"
             app:popUpTo="@+id/titleFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_typeAB"
+            app:destination="@id/typeAB"
+            app:popUpTo="@+id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_typeB"
@@ -60,4 +64,14 @@
         android:name="com.example.android.navigation.RulesFragment"
         android:label="fragment_rules"
         tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/typeAB"
+        android:name="com.example.android.navigation.TypeAB"
+        android:label="fragment_type_ab"
+        tools:layout="@layout/fragment_type_ab" >
+        <action
+            android:id="@+id/action_typeAB_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
 </navigation>
