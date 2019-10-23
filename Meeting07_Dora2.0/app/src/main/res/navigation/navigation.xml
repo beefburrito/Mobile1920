@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.android.navigation.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.android.navigation.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game"
+        >
+        <action
+            android:id="@+id/action_gameFragment_to_badEndFragment"
+            app:destination="@id/badEndFragment"
+            app:popUpTo="@+id/gameFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_goodEndFragment"
+            app:destination="@id/goodEndFragment"
+            app:popUpTo="@+id/gameFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_normalEndFragment"
+            app:destination="@id/normalEndFragment"
+            app:popUpTo="@+id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.android.navigation.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.android.navigation.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/badEndFragment"
+        android:name="com.example.android.navigation.GameOverFragment"
+        android:label="fragment_bad_end"
+        tools:layout="@layout/fragment_bad_end" >
+        <action
+            android:id="@+id/action_badEndFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goodEndFragment"
+        android:name="com.example.android.navigation.GameWonFragment"
+        android:label="fragment_good_end"
+        tools:layout="@layout/fragment_good_end">
+        <action
+            android:id="@+id/action_goodEndFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalEndFragment"
+        android:name="com.example.android.navigation.NormalEndFragment"
+        android:label="NormalEndFragment"
+        tools:layout="@layout/fragment_normal_end">
+        <action
+            android:id="@+id/action_normalEndFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
+</navigation>
