@@ -1,5 +1,5 @@
 Google Maps Android API Sample: Android Project
 =====================================================
 By:
-Eugene Sebastian
+Eugene Sebastian and
 Dave Joshua
