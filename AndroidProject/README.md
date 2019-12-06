@@ -1,4 +1,4 @@
-Google Maps Android API Sample: Android Project
+Google Maps Android : Android Project
 =====================================================
 By:
 Eugene Sebastian and
